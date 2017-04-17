@@ -1,0 +1,25 @@
+
+version: '1.0'
+#re-adding comments
+steps:
+  
+  build_step:
+    type: build
+    description: It builds the Djanga Service
+    dockerfile: Dockerfile
+    #image-name: itai/alon/test
+    image-name: itaicodefresh/bamigrash
+  
+  push_to_registry:
+    type: push
+    candidate: ${{build_step}}
+    tag: ${{CF_BRANCH}}
+      
+  #push_to_registry:
+    #type: push
+    #provider: ecr
+    #accessKeyId: ${{accessKeyId}}
+    #secretAccessKey: ${{secretAccessKey}}
+    #region: us-east-1
+    #candidate: ${{build_step}}
+    #tag: ${{CF_BRANCH}}
