@@ -8,7 +8,6 @@ steps:
     description: It builds the Djanga Service
     dockerfile: Dockerfile
     #image-name: itai/alon/test
-    image_name: myname
     repository: itaicodefresh/bamigrash
   
   push_to_registry:
