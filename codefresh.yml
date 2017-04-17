@@ -9,6 +9,7 @@ steps:
     dockerfile: Dockerfile
     #image-name: itai/alon/test
     repository: itaicodefresh/bamigrash
+    no_cache: $NO_CACHE
   
   push_to_registry:
     type: push
