@@ -7,8 +7,7 @@ steps:
     type: build
     description: It builds the Djanga Service
     dockerfile: Dockerfile
-    #image-name: itai/alon/test
-    repository: itaicodefresh/bamigrash
+    image_name: itaicodefresh/bamigrash
     no_cache: ${{NO_CACHE}}
   
   push_to_registry:
