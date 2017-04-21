@@ -14,7 +14,7 @@ steps:
     type: push
     candidate: ${{build_step}}
     tag: ${{CF_BRANCH}}
-    registry: mydockerhub
+    registry: myecr
       
   #push_to_registry:
     #type: push
