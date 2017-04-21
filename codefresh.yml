@@ -10,16 +10,16 @@ steps:
     image_name: itaicodefresh/bamigrash
     no_cache: ${{NO_CACHE}}
   
-  push_to_registry:
-    type: push
-    candidate: ${{build_step}}
-    #registry: myecr
-      
   #push_to_registry:
     #type: push
-    #provider: ecr
-    #accessKeyId: ${{accessKeyId}}
-    #secretAccessKey: ${{secretAccessKey}}
-    #region: us-east-1
     #candidate: ${{build_step}}
-    #tag: ${{CF_BRANCH}}
+    #registry: myecr
+      
+  push_to_registry:
+    type: push
+    provider: ecr
+    accessKeyId: ${{accessKeyId}}
+    secretAccessKey: ${{secretAccessKey}}
+    region: ap-southeast-2
+    candidate: ${{build_step}}
+    tag: ${{CF_BRANCH}}
