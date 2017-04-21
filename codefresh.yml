@@ -14,7 +14,7 @@ steps:
     type: push
     candidate: ${{build_step}}
     image_name: ma/ma/yokero/bamigrash
-    registry: myecr
+    #registry: myecr
       
   #push_to_registry:
     #type: push
